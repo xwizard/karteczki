@@ -3,7 +3,7 @@
   "productName": "Karteczki",
   "version": "0.0.0",
   "description": "My wicked app",
-  "license": "GPL3",
+  "license": "GPL-3.0",
   "repository": "xwizard/karteczki",
   "author": {
     "name": "xwizard",
@@ -15,7 +15,8 @@
   },
   "scripts": {
     "start": "electron .",
-    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1"
+    "build": "electron-packager . $npm_package_productName --out=dist --ignore='^/dist$' --prune --asar --all --version=0.31.1",
+    "lint": "jshint . --exclude node_modules"
   },
   "files": [
     "index.js",
@@ -26,10 +27,21 @@
     "electron-app"
   ],
   "dependencies": {
-    "electron-debug": "^0.1.1"
+    "electron-debug": "latest",
+    "knockout": "latest"
   },
   "devDependencies": {
-    "electron-packager": "^5.0.0",
-    "electron-prebuilt": "^0.31.1"
+    "electron-packager": "latest",
+    "electron-prebuilt": "latest",
+    "jshint": "latest"
+  },
+  "jshintConfig": {
+    "unused": "strict",
+    "globalstrict": true,
+    "globals": {
+      "require": true,
+      "__dirname": true,
+      "process": true
+    }
   }
 }

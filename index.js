@@ -1,6 +1,6 @@
 'use strict';
-const app = require('app');
-const BrowserWindow = require('browser-window');
+var app = require('app');
+var BrowserWindow = require('browser-window');
 
 // report crashes to the Electron project
 require('crash-reporter').start();
@@ -9,16 +9,16 @@ require('crash-reporter').start();
 require('electron-debug')();
 
 // prevent window being GC'd
-let mainWindow;
+var mainWindow;
 
 function createMainWindow() {
-	const win = new BrowserWindow({
+	var win = new BrowserWindow({
 		width: 600,
 		height: 400,
 		resizable: false
 	});
 
-	win.loadUrl(`file://${__dirname}/index.html`);
+	win.loadUrl('file://' + __dirname + '/index.html');
 	win.on('closed', onClosed);
 
 	return win;

@@ -28,7 +28,8 @@
   ],
   "dependencies": {
     "electron-debug": "latest",
-    "knockout": "latest"
+    "jquery-detached": ">=2.1.4-v2",
+    "jqueryui-detached": ">=1.11.4-v9"
   },
   "devDependencies": {
     "electron-packager": "latest",

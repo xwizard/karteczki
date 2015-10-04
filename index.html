@@ -5,47 +5,23 @@
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="index.css">
 		<link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.min.css">
-		<script type="text/javascript" src="index.html.js"></script>
 
 		</script>
 	</head>
 	<body>
 		<div class="container">
-			<header>
-				<h1>Electron boilerplate</h1>
-			</header>
-			<section class="main">
-				<div class="ui animated button" tabindex="0">
-				  <div class="visible content">Next</div>
-				  <div class="hidden content">
-				    <i class="right arrow icon"></i>
-				  </div>
-				</div>
-				<div class="ui vertical animated button" tabindex="0">
-				  <div class="hidden content">Shop</div>
-				  <div class="visible content">
-				    <i class="shop icon"></i>
-				  </div>
-				</div>
-				<div class="ui animated fade button" tabindex="0">
-				  <div class="visible content">Sign-up for a Pro account</div>
-				  <div class="hidden content">
-				    $12.99 a month
-				  </div>
-				</div>
 
-				<div class="ui dropdown">
-				  <input name="gender" type="hidden">
-				  <i class="dropdown icon"></i>
-				  <div class="default text">Gender</div>
-				  <div class="menu">
-				    <div class="item" data-value="male">Male</div>
-				    <div class="item" data-value="female">Female</div>
-				  </div>
-				</div>
-
-			</section>
-			<footer></footer>
+			<div class="ui pointing menu" data-bind="foreach: folders">
+			  <a class="item" data-bind="text: $data,
+                   css: { active: $data == $root.chosenFolderId() },
+                   click: $root.goToFolder">
+			  </a>
+			</div>
+			<div class="ui segment">
+			  <p></p>
+				<button class="ui button" data-bind="click: ok">OK</button>
+			</div>
 		</div>
 	</body>
+	<script type="text/javascript" src="index.html.js"></script>
 </html>

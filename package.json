@@ -30,7 +30,6 @@
   "dependencies": {
     "electron-debug": "latest",
     "knockout": ">=3.3.0",
-    "jquery": ">=2.1.4",
     "semantic-ui-css": ">=2.1.4",
     "rfr": ">=1.2.2"
   },

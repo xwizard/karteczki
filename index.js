@@ -13,9 +13,9 @@ var mainWindow;
 
 function createMainWindow() {
 	var win = new BrowserWindow({
-		width: 600,
-		height: 400,
-		resizable: false
+		width: 800,
+		height: 500,
+		resizable: true
 	});
 
 	win.loadUrl('file://' + __dirname + '/index.html');

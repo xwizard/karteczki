@@ -4,9 +4,8 @@
 		<meta charset="utf-8">
 		<title>Electron boilerplate</title>
 		<link rel="stylesheet" href="index.css">
-		<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-		<script src="http://code.jquery.com/jquery-1.10.2.js" onload="window.$ = window.jQuery = module.exports;"></script>
-<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="node_modules/semantic-ui-css/semantic.min.css"
+		<script type="text/javascript" src="node_modules/semantic-ui-css/semantic.js" onload="window.$ = window.jQuery = module.exports;"></script>
 		<script type="text/javascript" src="index.html.js"></script>
 
 		</script>
@@ -17,7 +16,54 @@
 				<h1>Electron boilerplate</h1>
 			</header>
 			<section class="main">
-				<div id="progressbar"></div>
+				<div class="ui animated button" tabindex="0">
+				  <div class="visible content">Next</div>
+				  <div class="hidden content">
+				    <i class="right arrow icon"></i>
+				  </div>
+				</div>
+				<div class="ui vertical animated button" tabindex="0">
+				  <div class="hidden content">Shop</div>
+				  <div class="visible content">
+				    <i class="shop icon"></i>
+				  </div>
+				</div>
+				<div class="ui animated fade button" tabindex="0">
+				  <div class="visible content">Sign-up for a Pro account</div>
+				  <div class="hidden content">
+				    $12.99 a month
+				  </div>
+				</div>
+
+				<div class="ui icon top left pointing dropdown button">
+				  <i class="wrench icon"></i>
+				  <div class="menu">
+				    <div class="header">Display Density</div>
+				    <div class="item">Comfortable</div>
+				    <div class="item">Cozy</div>
+				    <div class="item">Compact</div>
+				    <div class="ui divider"></div>
+				    <div class="item">Settings</div>
+				    <div class="item">
+				      <i class="dropdown icon"></i>
+				      <span class="text">Upload Settings</span>
+				      <div class="menu">
+				        <div class="item">
+				          <i class="check icon"></i>
+				          Convert Uploaded Files to PDF
+				        </div>
+				        <div class="item">
+				          <i class="check icon"></i>
+				          Digitize Text from Uploaded Files
+				        </div>
+				      </div>
+				    </div>
+				    <div class="item">Manage Apps</div>
+				    <div class="item">Keyboard Shortcuts</div>
+				    <div class="item">Help</div>
+				  </div>
+				</div>
+
 			</section>
 			<footer></footer>
 		</div>
